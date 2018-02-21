@@ -16,5 +16,6 @@ docker run -p 9200:9200 -p 9300:9300 --name elasticsearch -e "discovery.type=sin
 After starting elastic start maven
 
 ```ssh
-mvn clean test
+mvn clean test # unit tests
+mvn clean verify # integration tests
 ```

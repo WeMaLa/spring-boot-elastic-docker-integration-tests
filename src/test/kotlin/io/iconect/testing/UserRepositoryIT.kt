@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner::class)
 @SpringBootTest
-class UserRepositoryTest {
+class UserRepositoryIT {
 
     @Autowired
     lateinit var userRepository: UserRepository
