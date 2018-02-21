@@ -113,6 +113,55 @@
                     </environmentVariables>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.24.0</version>
+                <executions>
+                    <execution>
+                        <id>prepare-it-database</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                        <configuration>
+                            <images>
+                                <image>
+                                    <name>docker.elastic.co/elasticsearch/elasticsearch:5.6.6</name>
+                                    <alias>it-elasticsearch</alias>
+                                    <run>
+                                        <env>
+                                            <xpack.security.enabled>false</xpack.security.enabled>
+                                        </env>
+                                        <ports>
+                                            <port>9200:9200</port>
+                                            <port>9300:9300</port>
+                                        </ports>
+                                        <wait>
+                                            <http>
+                                                <method>GET</method>
+                                                <status>200</status>
+                                                <url>http://localhost:9200/_cat/health</url>
+                                            </http>
+                                            <time>60000</time>
+                                        </wait>
+                                    </run>
+                                </image>
+                            </images>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>remove-it-database</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                        <configuration>
+                            <removeVolumes>true</removeVolumes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
