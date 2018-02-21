@@ -132,6 +132,7 @@
                                     <run>
                                         <env>
                                             <xpack.security.enabled>false</xpack.security.enabled>
+                                            <discovery.type>single-node</discovery.type>
                                         </env>
                                         <ports>
                                             <port>9200:9200</port>
@@ -140,10 +141,6 @@
                                         <wait>
                                             <time>60000</time>
                                         </wait>
-                                        <log>
-                                            <enabled>true</enabled>
-                                            <color>green</color>
-                                        </log>
                                     </run>
                                 </image>
                             </images>
