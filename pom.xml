@@ -138,11 +138,6 @@
                                             <port>9300:9300</port>
                                         </ports>
                                         <wait>
-                                            <http>
-                                                <method>GET</method>
-                                                <status>200</status>
-                                                <url>http://localhost:9200/_cat/health</url>
-                                            </http>
                                             <time>60000</time>
                                         </wait>
                                     </run>

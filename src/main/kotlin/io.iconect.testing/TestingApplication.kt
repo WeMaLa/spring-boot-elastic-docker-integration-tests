@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class LightBotApplication
+class TestingApplication
 
 fun main(args: Array<String>) {
-    runApplication<LightBotApplication>(*args)
+    runApplication<TestingApplication>(*args)
 }
