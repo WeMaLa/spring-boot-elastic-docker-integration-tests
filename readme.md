@@ -1,6 +1,6 @@
 # Introduction 
 
-This example shows how integration testing with SpringBoot 2 and Elastic can be accomplished using Docker.
+This example shows how integration testing with SpringBoot 2, Kotlin and Elasticsearch can be accomplished using Docker.
 
 ## Requirements
 
