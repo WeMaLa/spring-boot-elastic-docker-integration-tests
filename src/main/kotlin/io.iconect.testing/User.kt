@@ -7,6 +7,9 @@ import org.springframework.data.elasticsearch.annotations.FieldType
 
 @Document(indexName = "user", type = "user")
 class User {
-    @Id lateinit var  id: String
-    @Field(type = FieldType.text) lateinit var name: String
+    @Id
+    var id: String? = null
+
+    @Field(type = FieldType.text)
+    var name: String? = null
 }

@@ -53,12 +53,12 @@ To reduce resources, it is suggested that the container be launched in Developin
 
 ```ssh
 docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.6
-docker run -p 9200:9200 -p 9300:9300 --name elasticsearch-it -e "discovery.type=single-node" -e "xpack.security.enabled=false"  docker.elastic.co/elasticsearch/elasticsearch:5.6.6 
+docker run -p 9200:9200 -p 9300:9300 --name it-elasticsearch -e "discovery.type=single-node" -e "xpack.security.enabled=false"  docker.elastic.co/elasticsearch/elasticsearch:5.6.6 
 ```
 
 #### Start and stop an installed image
 
 ```ssh
-docker start elasticsearch-it
-docker stop elasticsearch-it
+docker start it-elasticsearch
+docker stop it-elasticsearch
 ```
