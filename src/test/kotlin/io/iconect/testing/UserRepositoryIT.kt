@@ -20,6 +20,8 @@ class UserRepositoryIT {
 
     @Before
     fun setUp() {
+        println("SEARCH FOR EXISTING USER")
+        userRepository.findAll().forEach { u -> println("FOUND USER ${u.name}") }
         userRepository.deleteAll()
     }
 
