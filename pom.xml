@@ -45,11 +45,16 @@
             <version>2.9.4.1</version>
         </dependency>
 
-
         <!-- testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test-junit</artifactId>
+            <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -80,6 +85,12 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+                                <sourceDir>${project.basedir}/src/it/kotlin</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                 </executions>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -140,7 +151,7 @@
                                                 <status>200</status>
                                                 <url>http://localhost:9200/_cat/health</url>
                                             </http>
-                                            <time>30000</time>
+                                            <time>60000</time>
                                         </wait>
                                     </run>
                                 </image>

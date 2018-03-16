@@ -11,7 +11,7 @@ This example shows how integration testing with SpringBoot 2, Kotlin and Elastic
 
 #### Unit testing
 
-Maven test phase will apply all unit tests - in this demo ```UserTest.kt```
+Maven test phase will apply all unit tests - in this demo ```UserTest.kt``` and ```UserRepositoryMockTest```
 
 ```ssh
 mvn clean test
@@ -19,7 +19,7 @@ mvn clean test
 
 #### Integrations testing
 
-Maven verify phase will apply all unit tests and all integration tests - in this demo ```UserTest.kt``` and ```UserRepositoryIT.kt```
+Maven verify phase will apply all unit tests and all integration tests - in this demo ```UserTest.kt```, ```UserRepositoryMockTest``` and ```UserRepositoryIT.kt```
 
 ```ssh
 mvn clean verify
