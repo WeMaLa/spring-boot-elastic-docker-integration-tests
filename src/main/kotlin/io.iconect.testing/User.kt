@@ -7,5 +7,5 @@ import org.springframework.data.elasticsearch.annotations.Field
 import org.springframework.data.elasticsearch.annotations.FieldType
 
 @Document(indexName = "user", type = "user")
-class User constructor(@Id val id: String? = UUIDs.base64UUID(),
+class User constructor(@Id val id: String = UUIDs.base64UUID(),
                        @Field(type = FieldType.Keyword) val name: String? = null)
