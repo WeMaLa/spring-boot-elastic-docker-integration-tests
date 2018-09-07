@@ -1,6 +1,5 @@
 package io.iconect.testing
 
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate
 import org.springframework.data.elasticsearch.core.query.IndexQueryBuilder
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Service
  * This repository shows using elasticsearchTemplate to communicate with elasticsearch.
  */
 @Service
-class UserRepository @Autowired constructor(private val elasticsearchTemplate: ElasticsearchTemplate) {
+class UserRepository(private val elasticsearchTemplate: ElasticsearchTemplate) {
 
     fun store(user: User): String {
         val userIndex = IndexQueryBuilder()
