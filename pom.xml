@@ -165,7 +165,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.24.0</version>
+                <version>0.28.0</version>
                 <executions>
                     <execution>
                         <id>prepare-it-database</id>
@@ -179,10 +179,6 @@
                                     <name>docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4</name>
                                     <alias>it-elasticsearch</alias>
                                     <run>
-                                        <env>
-                                            <xpack.security.enabled>false</xpack.security.enabled>
-                                            <discovery.type>single-node</discovery.type>
-                                        </env>
                                         <ports>
                                             <port>9200:9200</port>
                                             <port>9300:9300</port>
