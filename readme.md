@@ -4,7 +4,7 @@ This example shows how integration testing with SpringBoot 2, Kotlin and Elastic
 
 ## Requirements
 
-* Java 1.8
+* Java 11
 * Maven >= 3.2.1
 
 ## Executions
