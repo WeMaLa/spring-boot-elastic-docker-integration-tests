@@ -176,7 +176,7 @@
                         <configuration>
                             <images>
                                 <image>
-                                    <name>docker.elastic.co/elasticsearch/elasticsearch:6.5.4</name>
+                                    <name>docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4</name>
                                     <alias>it-elasticsearch</alias>
                                     <run>
                                         <env>

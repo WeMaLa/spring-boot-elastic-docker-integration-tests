@@ -52,8 +52,8 @@ Debugging by an IDE will not start an elasticsearch container. The test containe
 To reduce resources, it is suggested that the container be launched in Developing mode
 
 ```ssh
-docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.8
-docker run -p 9200:9200 -p 9300:9300 --name it-elasticsearch -e "discovery.type=single-node" -e "xpack.security.enabled=false"  docker.elastic.co/elasticsearch/elasticsearch:5.6.8
+docker pull docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
+docker run -p 9200:9200 -p 9300:9300 --name it-elasticsearch -e "discovery.type=single-node" -e "xpack.security.enabled=false"  docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
 ```
 
 #### Start and stop an installed image
