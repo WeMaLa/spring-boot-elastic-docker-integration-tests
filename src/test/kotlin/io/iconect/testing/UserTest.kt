@@ -1,7 +1,7 @@
 package io.iconect.testing
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 /**
  * Simple unit test with no spring integration
